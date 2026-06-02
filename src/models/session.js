@@ -8,19 +8,19 @@ const sessionSchema = new Schema(
     },
     accessToken: {
       type: String,
-      requered: true,
+      required: true,
     },
     refreshToken: {
       type: String,
-      requered: true,
+      required: true,
     },
     accessTokenValidUntil: {
       type: Date,
-      requered: true,
+      required: true,
     },
     refreshTokenValidUntil: {
       type: Date,
-      requered: true,
+      required: true,
     },
   },
   {
