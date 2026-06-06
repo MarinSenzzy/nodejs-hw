@@ -5,7 +5,7 @@ import { saveFileToCloudinary } from '../utils/saveFileToCloudinary.js';
 export const updateUserAvatar = async (req, res) => {
   console.log(req.file, req.user);
   if (!req.file) {
-    createHttpError(400, 'No file');
+    throw createHttpError(400, 'No file');
   }
   const result = await saveFileToCloudinary(req.file.buffer, req.user._id);
   console.log(result);
